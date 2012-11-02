@@ -1,20 +1,21 @@
 #ifndef CHARACTER_H
 #define CHARACTER_H
 
-#include <string>
+#include <iostream>
+
 /// class Character - 
 class Character {
   // Attributes
-protected:
-  char * c;
+public:
+  std::string c;
   int value;
   // Operations
 public:
-  Character (char* c, int value);
+  Character (std::string c, int value);
   Character ();
   ~Character ();
   int getValue ();
-  char * getChar ();
+  std::string getChar ();
 };
 
 #endif 

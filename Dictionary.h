@@ -1,20 +1,22 @@
-#ifndef DICTIONARY_H
-#define DICTIONARY_H
+#ifndef DICTIONARY
+#define DICTIONARY
 
 #include <iostream>
 #include <fstream>
 #include <set>
-#include <string>
 
+using namespace std;
+
+/// class Dictionary - 
 class Dictionary
 {
+  // Attributes
+  std::set <string> words;
 
-  std::set <std::string> words;
-
+  // Operations
 public:
   Dictionary(std::string filename_dict);
   bool checkWord(std::string word);
-
 };
 
 #endif

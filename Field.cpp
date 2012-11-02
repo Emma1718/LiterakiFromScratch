@@ -22,5 +22,5 @@ GtkWidget * Field::draw(Gtk *graphic)
 void Field::insert(Character c)
 {
   this->c = c;
-  gtk_button_set_label(GTK_BUTTON(this->button), this->c.getChar());
+  //  gtk_button_set_label(GTK_BUTTON(this->button), this->c.getChar());
 }

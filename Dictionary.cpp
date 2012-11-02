@@ -5,29 +5,21 @@ using namespace std;
 Dictionary::Dictionary(string filename_dict)
 {
   ifstream read_file(filename_dict.c_str(), ifstream::in );
-  string s;
-  
-  while (read_file)
+  string w;
+  while (read_file>>w)
     {
-      read_file>>s;
-      if (!read_file.eof())
-	this->words.insert(s); 
+      this->words.insert(w);
     }
   read_file.close();
 }
 
-bool Dictionary::checkWord(string word )
+bool Dictionary::checkWord(string word)
 {
-	
   set<string>::iterator iter;
-  
-
   iter = this->words.find(word);
-
-  if (iter!=this->words.end ())
-    return true;
-  else
+  if (iter==this->words.end ())
     return false;
-	
+  else
+    return true;
 }
 
